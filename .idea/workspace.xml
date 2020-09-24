@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="54bafa96-c592-4e9a-8126-33dc93e3337b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="i7us8haimz65gaqc" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$" />
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hnpQbcZLCSVzCEt8wfyM08EY5M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_note_8_pro-i7us8haimz65gaqc" />
+    <property name="DEBUGGABLE_PROCESS" value="com.alibaba.android.arouter.demo" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.alibaba.android.arouter.demo.testinterceptor" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54bafa96-c592-4e9a-8126-33dc93e3337b" name="Default Changelist" comment="" />
+      <created>1600656694638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600656694638</updated>
+    </task>
+    <task id="LOCAL-00001" summary="辅导费">
+      <created>1600858479971</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600858479971</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="辅导费" />
+    <option name="LAST_COMMIT_MESSAGE" value="辅导费" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="653" y="213" key="#com.intellij.ide.util.MemberChooser" timestamp="1600849459537">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="653" y="213" key="#com.intellij.ide.util.MemberChooser/0.23.1680.952@0.23.1680.952" timestamp="1600849459537" />
+    <state x="703" y="269" key="AndroidProcessChooserDialog" timestamp="1600846852293">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="703" y="269" key="AndroidProcessChooserDialog/0.23.1680.952@0.23.1680.952" timestamp="1600846852293" />
+    <state x="419" y="97" key="CommitChangelistDialog2" timestamp="1600858479285">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="419" y="97" key="CommitChangelistDialog2/0.23.1680.958@0.23.1680.958" timestamp="1600858479285" />
+    <state x="100" y="123" width="1480" height="747" key="DiffContextDialog" timestamp="1600858457156">
+      <screen x="0" y="23" width="1680" height="958" />
+    </state>
+    <state x="100" y="123" width="1480" height="747" key="DiffContextDialog/0.23.1680.958@0.23.1680.958" timestamp="1600858457156" />
+    <state x="707" y="397" key="Github.ShareDialog" timestamp="1600859511361">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="707" y="397" key="Github.ShareDialog/0.23.1680.952@0.23.1680.952" timestamp="1600859511361" />
+    <state x="527" y="208" key="Github.UntrackedFilesDialog" timestamp="1600858805013">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="527" y="208" key="Github.UntrackedFilesDialog/0.23.1680.952@0.23.1680.952" timestamp="1600858805013" />
+    <state width="1638" height="347" key="GridCell.Tab.0.bottom" timestamp="1600850468996">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="124" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1600679063750" />
+    <state width="1638" height="116" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1600674334528" />
+    <state width="1638" height="347" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1600850468996" />
+    <state width="1638" height="43" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1600829718213" />
+    <state width="1638" height="347" key="GridCell.Tab.0.center" timestamp="1600850468995">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="124" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1600679063749" />
+    <state width="1638" height="116" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1600674334527" />
+    <state width="1638" height="347" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1600850468995" />
+    <state width="1638" height="43" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1600829718213" />
+    <state width="1638" height="347" key="GridCell.Tab.0.left" timestamp="1600850468995">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="124" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1600679063749" />
+    <state width="1638" height="116" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1600674334527" />
+    <state width="1638" height="347" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1600850468995" />
+    <state width="1638" height="43" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1600829718212" />
+    <state width="1638" height="347" key="GridCell.Tab.0.right" timestamp="1600850468995">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="124" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1600679063750" />
+    <state width="1638" height="116" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1600674334527" />
+    <state width="1638" height="347" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1600850468995" />
+    <state width="1638" height="43" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1600829718213" />
+    <state x="349" y="136" key="SettingsEditor" timestamp="1600829675197">
+      <screen x="0" y="23" width="1680" height="954" />
+    </state>
+    <state x="349" y="135" key="SettingsEditor/0.23.1680.947@0.23.1680.947" timestamp="1600670664473" />
+    <state x="349" y="136" key="SettingsEditor/0.23.1680.954@0.23.1680.954" timestamp="1600829675197" />
+    <state x="440" y="235" key="Vcs.Push.Dialog.v2" timestamp="1600858903212">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="440" y="235" key="Vcs.Push.Dialog.v2/0.23.1680.952@0.23.1680.952" timestamp="1600858903212" />
+    <state x="440" y="236" key="Vcs.Push.Dialog.v2/0.23.1680.958@0.23.1680.958" timestamp="1600858496495" />
+    <state x="519" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1600857630336">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="519" y="329" key="com.intellij.ide.util.TipDialog/0.23.1680.952@0.23.1680.952" timestamp="1600857630336" />
+    <state x="629" y="420" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600667058270">
+      <screen x="0" y="23" width="1680" height="956" />
+    </state>
+    <state x="629" y="420" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.956@0.23.1680.956" timestamp="1600667058270" />
+    <state x="601" y="347" key="edit.logcat.filter.dialog.dimensions" timestamp="1600672980611">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="601" y="347" key="edit.logcat.filter.dialog.dimensions/0.23.1680.947@0.23.1680.947" timestamp="1600672980611" />
+    <state x="506" y="253" width="691" height="486" key="find.popup" timestamp="1600849400176">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="506" y="252" width="667" height="486" key="find.popup/0.23.1680.947@0.23.1680.947" timestamp="1600679247456" />
+    <state x="506" y="252" width="818" height="488" key="find.popup/0.23.1680.949@0.23.1680.949" timestamp="1600674574748" />
+    <state x="506" y="253" width="691" height="486" key="find.popup/0.23.1680.952@0.23.1680.952" timestamp="1600849400176" />
+    <state x="551" y="295" key="git4idea.merge.GitPullDialog" timestamp="1600667069433">
+      <screen x="0" y="23" width="1680" height="956" />
+    </state>
+    <state x="551" y="295" key="git4idea.merge.GitPullDialog/0.23.1680.956@0.23.1680.956" timestamp="1600667069433" />
+    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1600846040804">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state x="505" y="230" width="670" height="676" key="search.everywhere.popup/0.23.1680.952@0.23.1680.952" timestamp="1600846040804" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/core/LogisticsCenter.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/alibaba/android/arouter/demo/MainActivity.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/core/LogisticsCenter.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/core/LogisticsCenter.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/core/LogisticsCenter.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/core/LogisticsCenter.java</url>
+          <line>131</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/launcher/ARouter.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/arouter-api/src/main/java/com/alibaba/android/arouter/core/LogisticsCenter.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
