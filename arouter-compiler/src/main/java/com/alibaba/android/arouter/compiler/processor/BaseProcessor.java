@@ -48,6 +48,8 @@ public abstract class BaseProcessor extends AbstractProcessor {
 
         // Attempt to get user configuration [moduleName]
         Map<String, String> options = processingEnv.getOptions();
+        logger.info("options = "+ options.toString());
+        System.out.println("System.out options = "+ options.toString());
         if (MapUtils.isNotEmpty(options)) {
             moduleName = options.get(KEY_MODULE_NAME);
             generateDoc = VALUE_ENABLE.equals(options.get(KEY_GENERATE_DOC_NAME));

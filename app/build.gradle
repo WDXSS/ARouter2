@@ -12,6 +12,8 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
+                //这些配置最终都会解析并保存到 ProcessingEnvironment 中；
+                //AROUTER_GENERATE_DOC: "enable" 会生成 com/alibaba/android/arouter/docs/arouter-map-of-app.json 文件
                 arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
             }
         }

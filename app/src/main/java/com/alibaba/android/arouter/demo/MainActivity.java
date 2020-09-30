@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.navByName:
                 ((HelloService) ARouter.getInstance().build("/yourservicegroupname/hello").navigation()).sayHello("mike");
+
                 //
                 Log.d(TAG, "onClick: " + ((TestServiceImpl) ARouter.getInstance().build("/TestServiceImpl/java").navigation()).getInfo());
                 break;
