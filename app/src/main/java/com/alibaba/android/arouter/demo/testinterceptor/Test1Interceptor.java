@@ -55,7 +55,7 @@ public class Test1Interceptor implements IInterceptor {
             ab.setPositiveButton("加点料", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    postcard.withString("extra", "我是在拦截器中附加的参数");
+                    postcard.withString("extra", "777 我是在拦截器中附加的参数");
                     callback.onContinue(postcard);
                 }
             });
@@ -67,7 +67,7 @@ public class Test1Interceptor implements IInterceptor {
                 }
             });
         } else {
-            callback.onContinue(postcard);
+           callback.onContinue(postcard);
         }
     }
 

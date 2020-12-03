@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
 
+import com.alibaba.android.arouter.core.LogisticsCenter;
 import com.alibaba.android.arouter.demo.MainActivity;
 import com.alibaba.android.arouter.demo.MainLooper;
 import com.alibaba.android.arouter.facade.Postcard;
@@ -32,7 +33,6 @@ public class Test1Interceptor2 implements IInterceptor {
     @Override
     public void process(final Postcard postcard, final InterceptorCallback callback) {
         if ("/test/activity4".equals(postcard.getPath())) {
-
             // 这里的弹窗仅做举例，代码写法不具有可参考价值
             final AlertDialog.Builder ab = new AlertDialog.Builder(MainActivity.getThis());
             ab.setCancelable(false);
@@ -47,8 +47,8 @@ public class Test1Interceptor2 implements IInterceptor {
             ab.setNeutralButton("算了", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
                     callback.onInterrupt(null);
+                    //被拦截后，会到调用的位置
                 }
             });
             ab.setPositiveButton("加点料", new DialogInterface.OnClickListener() {
@@ -65,11 +65,11 @@ public class Test1Interceptor2 implements IInterceptor {
                     ab.create().show();
                 }
             });
-        } else {
+            //直接 onContinue() 会交给 下一级 拦截器
+//            callback.onContinue(postcard);
+        }else{
             callback.onContinue(postcard);
         }
-        //直接 onContinue() 会交给 下一级 拦截器
-        callback.onContinue(postcard);
     }
 
     /**

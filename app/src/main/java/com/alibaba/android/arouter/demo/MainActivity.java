@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.demo.module1.TestServiceImpl;
+import com.alibaba.android.arouter.demo.test2sv.PretreatmentServiceImp;
 import com.alibaba.android.arouter.demo.testinject.TestObj;
 import com.alibaba.android.arouter.demo.testinject.TestParcelable;
 import com.alibaba.android.arouter.demo.testinject.TestSerializable;
@@ -122,6 +123,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             @Override
                             public void onInterrupt(Postcard postcard) {
                                 Log.d("ARouter", "被拦截了");
+                                ARouter.getInstance()
+                                        .build("/test/activity3")
+                                        .withString("name","拦截4 重新定位到3")
+                                        .withInt("age",33)
+                                        .withBoolean("girl",false)
+                                        .navigation();
                             }
                         });
 
@@ -215,6 +222,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.getFragment:
                 Fragment fragment = (Fragment) ARouter.getInstance().build("/test/fragment").navigation();
                 Toast.makeText(this, "找到Fragment:" + fragment.toString(), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.PretreatmentService:
+                ARouter.getInstance().navigation(PretreatmentServiceImp.class);
                 break;
             default:
                 break;

@@ -192,7 +192,7 @@ public class RouteProcessor extends BaseProcessor {
             //【4.5】生成方法签名：
             // @Override
             // public void loadInto(Map<String, Class<? extends IRouteGroup>> routes)
-            MethodSpec.Builder loadIntoMethodOfRootBuilder = MethodSpec.methodBuilder(METHOD_LOAD_INTO)
+            MethodSpec.Builder loadIntoMethodOfRootBuilder = MethodSpec.methodBuilder(METHOD_LOAD_INTO) // METHOD_LOAD_INTO 方法名
                     .addAnnotation(Override.class)
                     .addModifiers(PUBLIC)
                     .addParameter(rootParamSpec);
@@ -338,7 +338,7 @@ public class RouteProcessor extends BaseProcessor {
                         routeDoc.setParams(paramList);
                     }
                     String mapBody = mapBodyBuilder.toString();
-
+                    //【5.4】生成方法体：：
                     loadIntoMethodOfGroupBuilder.addStatement(
                             "atlas.put($S, $T.build($T." + routeMeta.getType() + ", $T.class, $S, $S, " + (StringUtils.isEmpty(mapBody) ? null : ("new java.util.HashMap<String, Integer>(){{" + mapBodyBuilder.toString() + "}}")) + ", " + routeMeta.getPriority() + ", " + routeMeta.getExtra() + "))",
                             routeMeta.getPath(),
@@ -348,41 +348,49 @@ public class RouteProcessor extends BaseProcessor {
                             routeMeta.getPath().toLowerCase(),
                             routeMeta.getGroup().toLowerCase());
 
-                    routeDoc.setClassName(className.toString());
-                    routeDocList.add(routeDoc);
+                    routeDoc.setClassName(className.toString());// 将 className 保存到 routeDoc 中；
+                    routeDocList.add(routeDoc);// 将这个路由表加入到 routeDocList 中；
                 }
 
+                //【5.5】动态生成 java 文件：
                 // Generate groups
                 String groupFileName = NAME_OF_GROUP + groupName;
-                JavaFile.builder(PACKAGE_OF_GENERATE_FILE,
-                        TypeSpec.classBuilder(groupFileName)
+                JavaFile.builder(PACKAGE_OF_GENERATE_FILE,    // 包名；com.alibaba.android.arouter.routes
+                        TypeSpec.classBuilder(groupFileName)   // 类名 ARouter$$Group$$ + ${groupName}
                                 .addJavadoc(WARNING_TIPS)
-                                .addSuperinterface(ClassName.get(type_IRouteGroup))
+                                .addSuperinterface(ClassName.get(type_IRouteGroup)) // 实现 .IRouteGroup 接口；
                                 .addModifiers(PUBLIC)
                                 .addMethod(loadIntoMethodOfGroupBuilder.build())
                                 .build()
                 ).build().writeTo(mFiler);
 
+
+
+                logger.info(">>> Generated groupFileName: " + groupFileName + "<<<");
                 logger.info(">>> Generated group: " + groupName + "<<<");
+                //【5.6】将 key：groupName ---> value：ARouter$$Group$$ + ${groupName} 保存到 rootMap 表中；
                 rootMap.put(groupName, groupFileName);
-                docSource.put(groupName, routeDocList);
+                docSource.put(groupName, routeDocList);// 将当前组的所有路由表保存到 docSource 中；
             }
 
             if (MapUtils.isNotEmpty(rootMap)) {
+                //【6】生成方法体：：
+                // routes.put("app", ARouter$$Group$$${$groupName}.class);
                 // Generate root meta by group name, it must be generated before root, then I can find out the class of group.
                 for (Map.Entry<String, String> entry : rootMap.entrySet()) {
+                    //添加每个group对应loadInto（）方法中的代码  routes.put("app", ARouter$$Group$$app.class);
                     loadIntoMethodOfRootBuilder.addStatement("routes.put($S, $T.class)", entry.getKey(), ClassName.get(PACKAGE_OF_GENERATE_FILE, entry.getValue()));
                 }
             }
 
-            // Output route doc
+            // Output route doc //【7】如果 gradle 设置了生成路由表，那就将 docSource 以 json 的形式输出；
             if (generateDoc) {
                 docWriter.append(JSON.toJSONString(docSource, SerializerFeature.PrettyFormat));
                 docWriter.flush();
                 docWriter.close();
             }
 
-            // Write provider into disk
+            // Write provider into disk   //【8】动态生成 java 文件：
             String providerMapFileName = NAME_OF_PROVIDER + SEPARATOR + moduleName;
             JavaFile.builder(PACKAGE_OF_GENERATE_FILE,
                     TypeSpec.classBuilder(providerMapFileName)

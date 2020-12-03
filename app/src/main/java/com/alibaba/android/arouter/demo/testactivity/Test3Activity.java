@@ -16,7 +16,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 public class Test3Activity extends AppCompatActivity {
 
     @Autowired
-    String name;
+     String name;
 
     @Autowired
     int age;

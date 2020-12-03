@@ -49,6 +49,7 @@ import static javax.lang.model.element.Modifier.PUBLIC;
 @AutoService(Processor.class)
 @SupportedAnnotationTypes({ANNOTATION_TYPE_AUTOWIRED})
 public class AutowiredProcessor extends BaseProcessor {
+    //【1】key 表示属性所属的类，value 是一个 list 列表，保存这个类被 Autowired 修饰的所有元素；
     private Map<TypeElement, List<Element>> parentAndChild = new HashMap<>();   // Contain field need autowired and his super class.
     private static final ClassName ARouterClass = ClassName.get("com.alibaba.android.arouter.launcher", "ARouter");
     private static final ClassName AndroidLog = ClassName.get("android.util", "Log");
@@ -65,7 +66,9 @@ public class AutowiredProcessor extends BaseProcessor {
         if (CollectionUtils.isNotEmpty(set)) {
             try {
                 logger.info(">>> Found autowired field, start... <<<");
+                //【*2.2.3.3.1】对变量进行归类，并找到其所属的类；
                 categories(roundEnvironment.getElementsAnnotatedWith(Autowired.class));
+                //【*2.2.3.3.2】动态生成 java 类！
                 generateHelper();
 
             } catch (Exception e) {
@@ -78,13 +81,17 @@ public class AutowiredProcessor extends BaseProcessor {
     }
 
     private void generateHelper() throws IOException, IllegalAccessException {
+        //【1】获得 .ISyringe/.SerializationService 接口在编译时期的状态信息；
         TypeElement type_ISyringe = elementUtils.getTypeElement(ISYRINGE);
         TypeElement type_JsonService = elementUtils.getTypeElement(JSON_SERVICE);
+        //【2】返回类型信息：类/接口
         TypeMirror iProvider = elementUtils.getTypeElement(Consts.IPROVIDER).asType();
         TypeMirror activityTm = elementUtils.getTypeElement(Consts.ACTIVITY).asType();
         TypeMirror fragmentTm = elementUtils.getTypeElement(Consts.FRAGMENT).asType();
         TypeMirror fragmentTmV4 = elementUtils.getTypeElement(Consts.FRAGMENT_V4).asType();
 
+        //【3】开始动态生成类：
+        //【3.1】生成 inject 方法的参数：Object target
         // Build input param name.
         ParameterSpec objectParamSpec = ParameterSpec.builder(TypeName.OBJECT, "target").build();
 
@@ -254,14 +261,17 @@ public class AutowiredProcessor extends BaseProcessor {
      */
     private void categories(Set<? extends Element> elements) throws IllegalAccessException {
         if (CollectionUtils.isNotEmpty(elements)) {
+            //【1】遍历所有被 @AutoWired 注解的元素；
             for (Element element : elements) {
+                //【2】返回封装此元素（非严格意义上）的最里层元素，实际上就是其所属的类；
                 TypeElement enclosingElement = (TypeElement) element.getEnclosingElement();
-
+                //【3】如果此成员属性是 private 的，那就抛出异常！
                 if (element.getModifiers().contains(Modifier.PRIVATE)) {
+                    //element.getSimpleName() 属性名称； enclosingElement.getQualifiedName() class Name
                     throw new IllegalAccessException("The inject fields CAN NOT BE 'private'!!! please check field ["
                             + element.getSimpleName() + "] in class [" + enclosingElement.getQualifiedName() + "]");
                 }
-
+                //【4】将成员属性 element 和所属类元素 enclosingElement 保存到 parentAndChild 中，分类完毕；
                 if (parentAndChild.containsKey(enclosingElement)) { // Has categries
                     parentAndChild.get(enclosingElement).add(element);
                 } else {
